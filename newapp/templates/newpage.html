@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Members</h1>
+<br>
+<table id="customers" border="1">
+    <thead>
+        <th>id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>country</th>
+        <th colspan="2" id="mid" >Action</th>
+    </thead>
+{% for x in mem %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.firstname}}</td>
+        <td>{{x.lastname}}</td>
+        <td>{{x.country}}</td>
+        <td>
+            <a href="update/{{x.id}}"><button>update</button> </a>
+        </td>
+            <td>
+            <a href="{% url 'delete' x.id %}"><button id="del"> Delete</button> </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+        <a href="{% url 'add' %}"><button id="new3">Add Member</button></a>
+
+        
+   
+{% endblock %}
+
+

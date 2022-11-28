@@ -1,0 +1,35 @@
+{% extends 'home.html' %}{% load static %}
+<link rel="stylesheet" href="{% static 'membership/style.css' %}">
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Why become pro?</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ipsam dignissimos blanditiis reprehenderit
+                repellendus voluptate minus quae itaque vero sunt corporis velit voluptatem fugiat, rerum vitae non
+                earum reiciendis ab.</p>
+
+            <form action="{% url 'become_pro2' %}" method="post" id="payment-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="">Membership type</label>
+
+                </div>
+                <p></p>
+                <button class="btn btn-primary">YEARLY</button>
+            </form>
+            <form action="{% url 'become_pro1' %}" method="post" id="payment-form">
+                {% csrf_token %}
+                <p></p>
+                <button class="btn btn-primary">Monthly</button>
+            </form>
+
+        </div>
+        <div class="col-lg-6">
+            <img src="https://i.pinimg.com/736x/0c/79/11/0c7911436c97909676c5d089397b751c.jpg" class="img-responsive">
+        </div>
+    </div>
+
+
+    {% endblock %}

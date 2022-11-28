@@ -1,0 +1,15 @@
+{% extends 'membership/home.html' %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'membership/style.css' %}">
+{% block content %}
+
+<div class="text-center mt-5">
+<p>Thank you for payment</p>
+<br>
+<p>Your subscription expire date:{{expiry}}</p>
+<br>
+<a href="/" class="btn btn-success">Home</a>
+
+</div>
+
+{% endblock %}

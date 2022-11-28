@@ -1,0 +1,50 @@
+.container {
+    margin: 80px 240px 60px 240px;
+    padding: 0px 100px 100px 100px;
+}
+
+body{
+    background-color: rgb(185, 213, 218);
+}
+
+#nn{
+   padding: 8px 20px 10px 20px;
+}
+#n1{
+    color: blue;
+}
+#n2{
+    color: brown;
+}
+
+input{
+    padding: 10px;
+}
+button{
+    padding: 8px;
+}
+#n3,#n4{
+    color: green;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid rgb(17, 4, 4);
+    padding: 6px;
+}
+
+#customers #del {
+    background-color: rgb(255, 60, 0);
+    border-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+}
+
+#customers #mid {
+    text-align: center;
+    
+}
+h1{
+    color: green;
+}
